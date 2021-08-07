@@ -58,6 +58,11 @@ public class GasParticle : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             manager.AssignedParticle();
             Debug.Log("Assigned Particle");
         }
+        else if (manager.IsMouseOverGasPanel() != GasType.None)
+        {
+            manager.IncreaseVignette();
+            clicked = false;
+        }
         else
         {
             clicked = false;

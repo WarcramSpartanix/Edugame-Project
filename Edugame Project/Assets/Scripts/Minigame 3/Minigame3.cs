@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Minigame3 : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Minigame3 : MonoBehaviour
     [SerializeField] private GameObject oxygenPanel;
     [SerializeField] private GameObject carbonDioxidePanel;
     [SerializeField] private Timer timer;
+    [SerializeField] private Image vignetteImage;
 
     [SerializeField] private GameObject oxygenPrefab;
     [SerializeField] private GameObject carbonDioxidePrefab;
@@ -100,6 +102,13 @@ public class Minigame3 : MonoBehaviour
         temp.GetComponent<GasParticle>().manager = this;
 
         spawnedParticlesCount++;
+    }
+
+    public void IncreaseVignette()
+    {
+        Color colorTemp = new Color(0, 0, 0, vignetteImage.color.a);
+        colorTemp.a += 0.15f;
+        vignetteImage.color = colorTemp;
     }
 
     public void Gameover()
