@@ -14,26 +14,18 @@ public class Minigame3 : MonoBehaviour
     [SerializeField] private GameObject carbonDioxidePrefab;
 
     [SerializeField] private int totalParticles;    // total particles to spawn and assign
+    private int spawnedParticlesCount = 0;
     private int assignedParticleCount = 0;      // number of particles assigned to panel
+    private float timeElapsed = 0;
+    private float deltaSpawnTime = 0;
 
     private void Start()
     {
-        for (int i = 0; i < totalParticles; i++)
-        {
-            GameObject temp;
-            Vector3 offset = new Vector3(Random.Range(-100.0f, 100.0f), Random.Range(-100.0f, 100.0f));
-            if (Random.Range(0, 2) % 2 == 0)
-            {
-                temp = Instantiate(oxygenPrefab, this.transform);    
-            }
-            else
-            {
-                temp = Instantiate(carbonDioxidePrefab, this.transform);
-            }
+        SpawnParticle();
 
-            temp.transform.Translate(offset);
-            temp.GetComponent<GasParticle>().manager = this;
-        }
+        float timerDuration = timer.timeSlider.maxValue / timer.tickRate;   // in Seconds
+        timerDuration -= timerDuration * 0.25f; // make sure there is at least 25% of the duration left before the last particle spawns
+        deltaSpawnTime = timerDuration / (totalParticles - 1);
     }
 
     private void Update()
@@ -53,6 +45,14 @@ public class Minigame3 : MonoBehaviour
                 timer.isPlaying = false;
             }
         }
+
+        timeElapsed += Time.deltaTime;
+        if (timeElapsed >= deltaSpawnTime)
+        {
+            SpawnParticle();
+            timeElapsed -= deltaSpawnTime;
+        }    
+
     }
 
     public GasParticle.GasType IsMouseOverGasPanel()
@@ -75,6 +75,31 @@ public class Minigame3 : MonoBehaviour
     public void AssignedParticle()
     {
         assignedParticleCount++;
+    }
+
+    public void SpawnParticle(bool isOveridden = false)
+    {
+        if (!isOveridden)
+        {
+            if (spawnedParticlesCount >= totalParticles)
+                return;
+        }
+
+        GameObject temp;
+        Vector3 offset = new Vector3(Random.Range(-100.0f, 100.0f), Random.Range(-100.0f, 100.0f));
+        if (Random.Range(0, 2) % 2 == 0)
+        {
+            temp = Instantiate(oxygenPrefab, this.transform);
+        }
+        else
+        {
+            temp = Instantiate(carbonDioxidePrefab, this.transform);
+        }
+
+        temp.transform.Translate(offset);
+        temp.GetComponent<GasParticle>().manager = this;
+
+        spawnedParticlesCount++;
     }
 
     public void Gameover()

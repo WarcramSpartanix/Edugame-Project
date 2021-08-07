@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] private float tickRate = 1.0f; //  slider value reduced per second
+    public float tickRate; //  slider value reduced per second
 
     public Slider timeSlider;
 
