@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class InformationWindow : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -10,20 +11,90 @@ public class InformationWindow : MonoBehaviour, IBeginDragHandler, IDragHandler,
 
     bool isNotMinimized = true; // the window is not minimized
 
+    int totalScore = 0;
+    [SerializeField] int numFacilities = 0; // number of facilities selected
+    Facility[] facilities;
+
+    [SerializeField] TextMeshProUGUI nameText;
+    [SerializeField] TextMeshProUGUI titleText; 
+    public string StowawayName { get; private set; } 
 
     private Vector2 lastMousePosition;
 
+    void Awake()
+    {
+        string name = this.nameText.text;
+        name = name.Replace("Name: ", ""); // remove the Name: part of the string
+        name = name.Replace(" ", ""); // remove spaces
+        this.StowawayName = name;
+    }
+
+    void Start()
+    {
+        this.facilities = this.GetComponentsInChildren<Facility>();
+        this.titleText.text = this.StowawayName + ".exe"; 
+    }
+
+    #region Facilities Assignment
+    public bool CheckFacility(bool flag)
+    {
+        if (flag) // facility is selected
+        {
+            if (this.numFacilities < 3)
+            {
+
+                this.numFacilities++;
+                //Debug.Log(this.numFacilities);
+                return true;
+            }
+        }
+        else
+        {
+            this.numFacilities--;
+        }
+        return false;
+    }
+
+    public void CalculateScore()
+    {
+        if (this.numFacilities > 0)
+        {
+            foreach (Facility facility in this.facilities)
+            {
+                if (facility.CheckSelection())
+                {
+                    this.totalScore += facility.GetPoints();
+                }
+            }
+            Debug.Log("Total Score: " + this.totalScore);
+        }
+        else
+        {
+            Debug.Log("No facilities assigned!");
+        }
+    }
+    #endregion 
+
+    #region Window Visibility
     public void OnMinimizeClick()
     {
         this.isNotMinimized = !this.isNotMinimized;
         this.windowBody.SetActive(this.isNotMinimized);
     }
 
+    public void MaximizeWindow()
+    {
+        this.isNotMinimized = true;
+        this.windowBody.SetActive(true);
+    }
+
     public void OnExitClick()
     {
         this.gameObject.SetActive(false);
     }
+    #endregion
 
+    #region Window Drag
     public void OnBeginDrag(PointerEventData eventData)
     {
         lastMousePosition = eventData.position;
@@ -70,5 +141,5 @@ public class InformationWindow : MonoBehaviour, IBeginDragHandler, IDragHandler,
         }
         return isInside;
     }
-
+    #endregion
 }
