@@ -109,11 +109,11 @@ public class InformationWindow : MonoBehaviour, IBeginDragHandler, IDragHandler,
         Vector3 newPosition = rect.position +  new Vector3(diff.x, diff.y, transform.position.z);
         Vector3 oldPos = rect.position;
         rect.position = newPosition;
-        //if(!IsRectTransformInsideSreen(rect)) // Use this if you want to contain the window in the Scene.
-        //                                      //Note: it gets kind of weird if you drag mouse out then back in, in a functioning way, that me no like.
-        //{
-        //    rect.position = oldPos;
-        //}
+        if (!IsRectTransformInsideSreen(rect)) // Use this if you want to contain the window in the Scene.
+                                               //Note: it gets kind of weird if you drag mouse out then back in, in a functioning way, that me no like.
+        {
+            rect.position = oldPos;
+        }
         lastMousePosition = currentMousePosition;
     }
     public void OnEndDrag(PointerEventData eventData)
