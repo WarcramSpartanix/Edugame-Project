@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/Edugame Project/[Ll]ibrary/
-/Edugame Project/[Tt]emp/
-/Edugame Project/[Oo]bj/
-/Edugame Project/[Bb]uild/
-/Edugame Project/[Bb]uilds/
-/Edugame Project/[Ll]ogs/
-/Edugame Project/[Mm]emoryCaptures/
+/Edugame*Project/[Ll]ibrary/
+/Edugame*Project/[Tt]emp/
+/Edugame*Project/[Oo]bj/
+/Edugame*Project/[Bb]uild/
+/Edugame*Project/[Bb]uilds/
+/Edugame*Project/[Ll]ogs/
+/Edugame*Project/[Mm]emoryCaptures/
  
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/Edugame Project/[Aa]ssets/**/*.meta
