@@ -55,7 +55,7 @@ public class InformationWindow : MonoBehaviour, IBeginDragHandler, IDragHandler,
         return false;
     }
 
-    public void CalculateScore()
+    public int CalculateScore()
     {
         if (this.numFacilities > 0)
         {
@@ -66,12 +66,14 @@ public class InformationWindow : MonoBehaviour, IBeginDragHandler, IDragHandler,
                     this.totalScore += facility.GetPoints();
                 }
             }
-            Debug.Log("Total Score: " + this.totalScore);
+            //Debug.Log("Total Score: " + this.totalScore);
         }
         else
         {
             Debug.Log("No facilities assigned!");
         }
+
+        return this.totalScore;
     }
     #endregion 
 
@@ -98,6 +100,7 @@ public class InformationWindow : MonoBehaviour, IBeginDragHandler, IDragHandler,
     public void OnBeginDrag(PointerEventData eventData)
     {
         lastMousePosition = eventData.position;
+        this.transform.SetAsLastSibling();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -109,11 +112,11 @@ public class InformationWindow : MonoBehaviour, IBeginDragHandler, IDragHandler,
         Vector3 newPosition = rect.position +  new Vector3(diff.x, diff.y, transform.position.z);
         Vector3 oldPos = rect.position;
         rect.position = newPosition;
-        if (!IsRectTransformInsideSreen(rect)) // Use this if you want to contain the window in the Scene.
-                                               //Note: it gets kind of weird if you drag mouse out then back in, in a functioning way, that me no like.
-        {
-            rect.position = oldPos;
-        }
+        //if (!IsRectTransformInsideSreen(rect)) // Use this if you want to contain the window in the Scene.
+        //                                       //Note: it gets kind of weird if you drag mouse out then back in, in a functioning way, that me no like.
+        //{
+        //    rect.position = oldPos;
+        //}
         lastMousePosition = currentMousePosition;
     }
     public void OnEndDrag(PointerEventData eventData)
@@ -142,4 +145,11 @@ public class InformationWindow : MonoBehaviour, IBeginDragHandler, IDragHandler,
         return isInside;
     }
     #endregion
+
+    public bool isAssigned()
+    {
+        if (this.numFacilities > 0)
+            return true;
+        return false;
+    }
 }

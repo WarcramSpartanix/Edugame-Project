@@ -20,6 +20,12 @@ public class InformationIcon : MonoBehaviour
         {
             this.informationWindow.gameObject.SetActive(true);
             this.informationWindow.MaximizeWindow();
+            this.informationWindow.transform.SetAsLastSibling();
         }
+    }
+
+    public void SetInformationWindow(InformationWindow window)
+    {
+        informationWindow = window;
     }
 }
