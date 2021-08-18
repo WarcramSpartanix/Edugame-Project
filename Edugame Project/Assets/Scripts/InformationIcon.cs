@@ -27,6 +27,7 @@ public class InformationIcon : MonoBehaviour
     public void SetInformationWindow(InformationWindow window)
     {
         informationWindow = window;
+        this.nameText = this.GetComponentInChildren<TextMeshProUGUI>();
         this.nameText.text = this.informationWindow.StowawayName + ".exe";
     }
 }
