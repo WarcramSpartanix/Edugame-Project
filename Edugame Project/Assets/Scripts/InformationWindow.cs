@@ -21,6 +21,11 @@ public class InformationWindow : MonoBehaviour, IBeginDragHandler, IDragHandler,
 
     private Vector2 lastMousePosition;
 
+    [SerializeField, TextArea] string poorResult;  
+    [SerializeField, TextArea] string adequateResult;  
+    [SerializeField, TextArea] string excellentResult;
+    string resultText;
+
     void Awake()
     {
         string name = this.nameText.text;
@@ -74,6 +79,24 @@ public class InformationWindow : MonoBehaviour, IBeginDragHandler, IDragHandler,
         }
 
         return this.totalScore;
+    }
+
+    public string GetResult()
+    {
+        if (this.totalScore >= 0 && this.totalScore <= 3)
+        {
+            this.resultText = this.poorResult;
+        }
+        else if (this.totalScore > 3 && this.totalScore <= 5)
+        {
+            this.resultText = this.adequateResult;
+        }
+        else if (this.totalScore > 5 && this.totalScore <= 7)
+        {
+            this.resultText = this.excellentResult;
+        }
+        Debug.Log(this.resultText);
+        return this.StowawayName + " " + this.resultText;
     }
     #endregion 
 

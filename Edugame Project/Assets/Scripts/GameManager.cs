@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public GameObject informationIconPrefab;
 
     private List<Profile> profileList;
+    [SerializeField] LogWindow logWindow;
     
     private int score = 0;
 
@@ -75,9 +76,11 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        this.logWindow.ClearLogs();
         foreach (Profile profile in profileList)
         {
             this.score += profile.GetScore();
+            this.logWindow.AddNewLog(profile.GetResult());
         }
 
         Debug.Log("Weekly Evaluation is " + this.score);
