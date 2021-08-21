@@ -387,7 +387,7 @@ GameObject:
   - component: {fileID: 8916906545976593648}
   - component: {fileID: 8916906545976593649}
   m_Layer: 5
-  m_Name: Crime
+  m_Name: Reason
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -840,6 +840,9 @@ MonoBehaviour:
   numFacilities: 0
   nameText: {fileID: 8916906547694507473}
   titleText: {fileID: 8916906547194295368}
+  poorResult: 
+  adequateResult: 
+  excellentResult: 
 --- !u!114 &8916906546337297879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -854,7 +857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

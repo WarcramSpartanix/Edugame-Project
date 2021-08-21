@@ -26,4 +26,9 @@ public class Profile
     {
         return windowComp.isAssigned();
     }
+
+    public string GetResult()
+    {
+        return windowComp.GetResult();
+    }
 }
