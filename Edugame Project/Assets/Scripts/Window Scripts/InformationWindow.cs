@@ -105,6 +105,8 @@ public class InformationWindow : Window
 
     public void setProfile(StowawayProfile profile)
     {
+        if(facilities == null || facilities.Length == 0) this.facilities = this.GetComponentsInChildren<Facility>();
+
         this.image.sprite = profile.sprite;
 
         this.StowawayName = profile.name;
