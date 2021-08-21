@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
     
     private int score = 0;
 
+    private int weekNum = 0;
+    private int[] stowawayCount = { 3, 4, 5 };
+
     private void Start()
     {
         profileList = new List<Profile>();

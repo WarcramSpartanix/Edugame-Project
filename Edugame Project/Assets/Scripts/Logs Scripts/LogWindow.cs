@@ -17,7 +17,8 @@ public class LogWindow : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     void Start()
     {
         this.logMessages = new List<GameObject>();
-        this.logMessages.Add(this.GetComponentInChildren<LogMessage>().gameObject); 
+        this.logMessages.Add(this.GetComponentInChildren<LogMessage>().gameObject);
+        this.gameObject.SetActive(false);
     }
 
     public void AddNewLog(string message)
