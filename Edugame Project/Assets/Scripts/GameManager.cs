@@ -33,13 +33,18 @@ public class GameManager : MonoBehaviour
     public GameObject informationIconPrefab;
     public GameObject stowawayPrefab;
 
+    [SerializeField] GameObject profileWindow; // will contain all profile icons
+
     private List<Profile> profileList;
-    [SerializeField] LogWindow logWindow;
+    [SerializeField] EmailWindow emailWindow;
     
     private int score = 0;
 
     private int weekNum = 0;
     [SerializeField]private List<int> stowawayWeekNum;
+
+    [SerializeField] GameObject logsButton;
+    [SerializeField] GameObject canvas; 
 
     private void Start()
     {
@@ -59,7 +64,7 @@ public class GameManager : MonoBehaviour
 
 
             GameObject iconTemp = Spawn(rand);
-            iconTemp.transform.position = new Vector2(x, 250);
+            //iconTemp.transform.position = new Vector2(x, 250);
 
             profilePrefabList.RemoveAt(rand);
         }  
@@ -67,7 +72,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject Spawn(int index)
     {
-        GameObject windowTemp = Instantiate(stowawayPrefab, this.transform);
+        GameObject windowTemp = Instantiate(stowawayPrefab, this.canvas.transform);
 
         //  information window init
         windowTemp.transform.SetAsLastSibling();
@@ -75,7 +80,7 @@ public class GameManager : MonoBehaviour
         windowTemp.GetComponent<InformationWindow>().setProfile(profilePrefabList[index]);
         windowTemp.SetActive(false);
 
-        GameObject iconTemp = Instantiate(informationIconPrefab, this.transform);
+        GameObject iconTemp = Instantiate(informationIconPrefab, this.profileWindow.transform);
         iconTemp.transform.SetAsFirstSibling();
         iconTemp.GetComponent<InformationIcon>().SetInformationWindow(windowTemp.GetComponent<InformationWindow>());
 
@@ -94,6 +99,24 @@ public class GameManager : MonoBehaviour
         profileList.Clear();
     }
 
+    void ClearEmails()
+    {
+        this.emailWindow.ClearLogs();
+        EmailIcon[] emailIcons = GameObject.FindObjectsOfType<EmailIcon>();
+        foreach (EmailIcon emailIcon in emailIcons)
+        {
+            emailIcon.ResetValues();
+        }
+    }
+
+    void CloseWindows()
+    {
+        foreach (Window window in Resources.FindObjectsOfTypeAll(typeof(Window)) as Window[])
+        {
+            window.OnExitClick();
+        }
+    }
+
     public void EvaluateWeek()
     {
         foreach (Profile profile in profileList)
@@ -105,16 +128,16 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        this.logWindow.ClearLogs();
+        ClearEmails();
         foreach (Profile profile in profileList)
         {
             this.score += profile.GetScore();
-            this.logWindow.AddNewLog(profile.GetResult());
+            this.emailWindow.AddNewLog(profile.GetResult());
         }
 
-        Debug.Log("Weekly Evaluation is " + this.score);
-
         NextWeek();
+
+        Debug.Log("Weekly Evaluation is " + this.score);
     }
 
     public void NextWeek()
@@ -124,6 +147,13 @@ public class GameManager : MonoBehaviour
         {
             ClearProfiles();
             SpawnBatch(stowawayWeekNum[weekNum]);
+
+            if (!this.logsButton.activeInHierarchy)
+            {
+                this.logsButton.SetActive(true);
+            }
+
+            CloseWindows();
         }
     }
 }

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc740221b4c4f74418b4ab4ca3461aa5, type: 3}
+  m_Name: Don Antonio
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 84f017d642173e54f807c9ae6514e301, type: 3}
+  name: Don Antonio
+  age: 
+  sex: M
+  reason: "Wants to prove that the Earth is flat.\r"
+  profile: Lives a sedentary lifestyle. Consumes multiple chips and fried foods along
+    with 25- 30 bottles of beer every week and sleeps at 2:00 am.
+  gymScore: 3
+  canteenScore: 2
+  waterStationScore: 0
+  podScore: 1
+  medbayScore: 0
+  recreationAreaScore: 0
+  poorResult: "Don Antonio\u2019s condition has worsened, and he has developed hypertension
+    due to his unhealthy lifestyle."
+  adequateResult: Don Antonio maintains his sedentary lifestyle despite the risk
+    of hypertension. He has also reported having occasional headaches and chest pain.
+  excellentResult: "Don Antonio\u2019s health has improved greatly thanks to his
+    more active lifestyle where he eats well and regularly exercises. When he goes
+    out on his morning runs, he tries to convince other passengers that the Earth
+    is flat."

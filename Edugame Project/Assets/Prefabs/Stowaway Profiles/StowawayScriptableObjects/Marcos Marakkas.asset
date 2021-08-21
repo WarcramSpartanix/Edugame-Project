@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc740221b4c4f74418b4ab4ca3461aa5, type: 3}
+  m_Name: Marcos Marakkas
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: c3da932862a349a43b22125f4575b144, type: 3}
+  name: Marcos Marakkas
+  age: 45?
+  sex: M
+  reason: Wants to save Matt Damon.
+  profile: 'A heavy smoker and has been smoking since he was 16. Previously worked
+    in a chemical factory for 10 years. Has been losing weight for the past couple
+    of months. Feeling of breathlessness. Cough with phlegm. Shoulders rising when
+    breathing. '
+  gymScore: 0
+  canteenScore: 0
+  waterStationScore: 0
+  podScore: 0
+  medbayScore: 3
+  recreationAreaScore: 2
+  poorResult: 
+  adequateResult: 
+  excellentResult: 

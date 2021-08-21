@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc740221b4c4f74418b4ab4ca3461aa5, type: 3}
+  m_Name: Poopie Roxas
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 84f017d642173e54f807c9ae6514e301, type: 3}
+  name: Poopie Roxas
+  age: 
+  sex: M
+  reason: Wants to try pooping on Mars.
+  profile: Recently got discharged from the hospital after acquiring covid19 - developed
+    pneumonia. Has been negative and no symptoms anymore after a month of hospitalization,
+    but he wanted to adopt a healthier lifestyle to avoid the virus.
+  gymScore: 3
+  canteenScore: 2
+  waterStationScore: 0
+  podScore: 1
+  medbayScore: 0
+  recreationAreaScore: 0
+  poorResult: 'Poopie Roxas suddenly feels ill, and begins to have a hard time breathing
+    again. He is sent to the medbay for treatment, and it is found out that he reacquired
+    the virus. Pooping on Mars may only be just a dream now. '
+  adequateResult: Poopie Roxas gets rest and moderate amounts of nutrition, but he
+    feels like it is not enough to avoid getting the virus. He still longs to poop
+    on Mars, but needs to be in good health to achieve it.
+  excellentResult: Poopie Roxas was able to eat healthier and manage his sleep schedule.
+    He feels very satisfied with his current lifestyle, and he now feels like he
+    can poop his best on Mars.

@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc740221b4c4f74418b4ab4ca3461aa5, type: 3}
+  m_Name: Julius de Guzman
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 84f017d642173e54f807c9ae6514e301, type: 3}
+  name: Julius de Guzman
+  age: 
+  sex: M
+  reason: Wants to see what Earth looks like from Mars.
+  profile: Generally in good health. Has recently been developing mild wheezing and
+    tightness in chest after exercising and playing space basketball. He does recall
+    using an inhaler as a child for Asthma but was told that he had outgrown the
+    condition.
+  gymScore: 0
+  canteenScore: 0
+  waterStationScore: 0
+  podScore: 1
+  medbayScore: 3
+  recreationAreaScore: 2
+  poorResult: "After a trip to the doctor\u2019s Julius de Guzman was informed that
+    his asthma had redeveloped. He now has to go back to using an inhaler to avoid
+    any further complications."
+  adequateResult: Julius de Guzman continues to report wheezing and tightness in
+    chest but says that it does not hinder him from accomplishing his duties. He
+    still hopes to be able to get a view of Earth from Mars.
+  excellentResult: 'Julius de Guzman is now fully enjoying playing space basketball
+    without any complications. He wonders if he can get a full time career as a space
+    basketball player in hopes of being able to get a first-class view of Earth from
+    Mars. '

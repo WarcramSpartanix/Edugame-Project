@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc740221b4c4f74418b4ab4ca3461aa5, type: 3}
+  m_Name: Anderson Chua
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 84f017d642173e54f807c9ae6514e301, type: 3}
+  name: Anderson Chua
+  age: 
+  sex: M
+  reason: Heard that Martian cows have good milk.
+  profile: Enjoys eating fast food meals and loves to drink carbonated drinks over
+    water. Unaware of his unhealthy habits, already wanted to modify lifestyle to
+    avoid development of heart problems. Has a history of Asthma.
+  gymScore: 3
+  canteenScore: 2
+  waterStationScore: 1
+  podScore: 0
+  medbayScore: 0
+  recreationAreaScore: 0
+  poorResult: Anderson Chua loved space fast food and carbonated drinks so much that
+    he forgot about changing his lifestyle. Upon eating fast food one day, he gets
+    a heart attack and is immediately sent to the medbay for treatment. He is now
+    unable to drink Martian cow milk.
+  adequateResult: "Anderson Chua still prefers eating fast food over healthy food,
+    and only exercises once a week. He feels that he is not getting better, but he\u2019s
+    not feeling worse either. He still wants to try that Martian cow milk."
+  excellentResult: "Anderson Chua maintains a healthy lifestyle, exercises regularly,
+    and eats more healthy foods now. He can now make a healthy smoothie with the
+    Martian cow milk that he\u2019s going to get soon."
