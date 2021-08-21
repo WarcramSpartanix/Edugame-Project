@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc740221b4c4f74418b4ab4ca3461aa5, type: 3}
+  m_Name: Pepito Manalo
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 5f9c6830f4d486c4fb4f53cceb68990e, type: 3}
+  name: Pepito Manalo
+  age: 22
+  sex: M
+  reason: Thinks that there's too much people sharing the oxygen on Earth
+  profile: Experiencing shortness of breath, chest tightness when breathing, continuous
+    cough and having difficulty to expectorate (spit) phlegm. Regularly starts the
+    day with 3 cups of coffee. Continuously works without rest to finish his tasks
+    early and to be able to do more that are assigned to him
+  gymScore: 2
+  canteenScore: 0
+  waterStationScore: 3
+  podScore: 0
+  medbayScore: 1
+  recreationAreaScore: 2
+  poorResult: Pepito Manalo was found unconscious in his room. Doctors on board mentioned
+    dehydration and mucus buildup as possible causes of his collapse.
+  adequateResult: Pepito Manalo continues to suffer from shortness of breath from
+    time to time. He is now regularly seeing the doctor, however, his condition does
+    not seem to be improving.
+  excellentResult: Pepito Manalo received a positive outcome after his latest medical
+    examination. His oxygen levels have increased and he feels that his breathing
+    is clearer now. He is now ready to start his life on Mars.
+  isUsed: 0

@@ -840,6 +840,11 @@ MonoBehaviour:
   numFacilities: 0
   nameText: {fileID: 8916906547694507473}
   titleText: {fileID: 8916906547194295368}
+  sexText: {fileID: 8916906546203053213}
+  ageText: {fileID: 8916906547416730682}
+  reasonText: {fileID: 8916906545976593649}
+  profileText: {fileID: 8916906547607859491}
+  image: {fileID: 8916906547456827651}
   poorResult: 
   adequateResult: 
   excellentResult: 
@@ -1048,6 +1053,7 @@ MonoBehaviour:
   points: 0
   checkmark: {fileID: 3397149069722674667}
   parentWindow: {fileID: 8598335410823621806}
+  facilityType: 5
 --- !u!1 &8916906546605197591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1329,6 +1335,7 @@ MonoBehaviour:
   points: 0
   checkmark: {fileID: 3303702846398923772}
   parentWindow: {fileID: 8598335410823621806}
+  facilityType: 0
 --- !u!1 &8916906546738486171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,6 +1486,7 @@ MonoBehaviour:
   points: 0
   checkmark: {fileID: 8927193373654244976}
   parentWindow: {fileID: 8598335410823621806}
+  facilityType: 1
 --- !u!23 &2568343831341418264
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1669,6 +1677,7 @@ MonoBehaviour:
   points: 0
   checkmark: {fileID: 582174825032680505}
   parentWindow: {fileID: 8598335410823621806}
+  facilityType: 4
 --- !u!1 &8916906547127269253
 GameObject:
   m_ObjectHideFlags: 0
@@ -2239,6 +2248,7 @@ MonoBehaviour:
   points: 0
   checkmark: {fileID: 6752555777346023179}
   parentWindow: {fileID: 8598335410823621806}
+  facilityType: 2
 --- !u!1 &8916906547590747870
 GameObject:
   m_ObjectHideFlags: 0
@@ -2603,6 +2613,7 @@ MonoBehaviour:
   points: 0
   checkmark: {fileID: 5225127218801438582}
   parentWindow: {fileID: 8598335410823621806}
+  facilityType: 3
 --- !u!1 &8916906547692432109
 GameObject:
   m_ObjectHideFlags: 0

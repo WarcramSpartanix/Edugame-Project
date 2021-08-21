@@ -884,9 +884,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profilePrefabList:
-  - {fileID: 8916906546337297865, guid: aed8a0fc624b0e249bdf38b1d844a6d3, type: 3}
+  - {fileID: 11400000, guid: 26f8fcb52575f6a409217ddd55072ef0, type: 2}
+  - {fileID: 11400000, guid: d3bfc69fa94f3ae4daaeef3b3b999a95, type: 2}
+  - {fileID: 11400000, guid: 2197dcb97b1bd4b4083d189d3233d155, type: 2}
   informationIconPrefab: {fileID: 4951869618107110683, guid: 2136a67340145c24ea1ba4f27da6b62b, type: 3}
+  stowawayPrefab: {fileID: 8916906546337297865, guid: aed8a0fc624b0e249bdf38b1d844a6d3, type: 3}
   logWindow: {fileID: 957755961}
+  stowawayWeekNum: 030000000400000005000000
 --- !u!1 &746480369
 GameObject:
   m_ObjectHideFlags: 0

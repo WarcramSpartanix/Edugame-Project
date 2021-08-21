@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc740221b4c4f74418b4ab4ca3461aa5, type: 3}
+  m_Name: John Magallanes
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 853d65d59af11df4f8f3d02b72e04a21, type: 3}
+  name: John Magallanes
+  age: 26
+  sex: M
+  reason: Got knocked out and woke up in the cargo. Thinks this is an isekai.
+  profile: Hypertensive and weighs 220 lbs. Verbalized severe pain felt on limbs
+    especially the legs. Shortness of breath, palpitations.
+  gymScore: 0
+  canteenScore: 0
+  waterStationScore: 0
+  podScore: 2
+  medbayScore: 3
+  recreationAreaScore: 1
+  poorResult: John Magallanes is currently confined in the Medbay with reports of
+    feeling unbearable body pain. Doctors identified the cause to be blood clot from
+    fatty material buildup and stress. He is now undergoing medication to prevent
+    a possible cardiac arrest
+  adequateResult: John Magallanes continues to suffer and stress from pain on the
+    limbs but tries his best to manage through it. He sometimes wonders if he should
+    regularly seek medical attention instead.
+  excellentResult: John Magallanes feels more relieved now that the pain on his limbs
+    have lessened. He feels as if he can move freely and has also started a fitness
+    goal to lose weight. He aims to be ready to go when they land on Mars.
+  isUsed: 0

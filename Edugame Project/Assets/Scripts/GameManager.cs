@@ -3,6 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+//[CreateAssetMenu(fileName = "profilePair", menuName = "ScriptableObjects/profilePair", order = 1)]
+//public class profilePair : ScriptableObject
+//{
+//    public StowawayProfile prof;
+//    public bool isUsed;
+
+//    public profilePair(StowawayProfile prof, bool used = false)
+//    {
+//        this.prof = prof;
+//        isUsed = used;
+//    }
+//    public void Used()
+//    {
+//        isUsed = true;
+//    }
+//}
 
 public class GameManager : MonoBehaviour
 {
@@ -13,9 +29,9 @@ public class GameManager : MonoBehaviour
     //    instance = this;
     //}
 
-
-    public List<GameObject> profilePrefabList;
+    public List<StowawayProfile> profilePrefabList;
     public GameObject informationIconPrefab;
+    public GameObject stowawayPrefab;
 
     private List<Profile> profileList;
     [SerializeField] LogWindow logWindow;
@@ -23,12 +39,12 @@ public class GameManager : MonoBehaviour
     private int score = 0;
 
     private int weekNum = 0;
-    private int[] stowawayCount = { 3, 4, 5 };
+    [SerializeField]private List<int> stowawayWeekNum;
 
     private void Start()
     {
         profileList = new List<Profile>();
-        SpawnBatch(3);
+        SpawnBatch(stowawayWeekNum[weekNum]);
         
     }
 
@@ -37,16 +53,26 @@ public class GameManager : MonoBehaviour
         float x = 100;
         for (int i = 0; i < count; i++, x+=150)
         {
-            GameObject iconTemp = Spawn(Random.Range(0, profilePrefabList.Count));
+            int rand;
+            rand = Random.Range(0, profilePrefabList.Count); 
+
+
+
+            GameObject iconTemp = Spawn(rand);
             iconTemp.transform.position = new Vector2(x, 250);
+
+            profilePrefabList.RemoveAt(rand);
         }  
     }
 
     public GameObject Spawn(int index)
     {
-        GameObject windowTemp = Instantiate(profilePrefabList[index], this.transform);
+        GameObject windowTemp = Instantiate(stowawayPrefab, this.transform);
+
+        //  information window init
         windowTemp.transform.SetAsLastSibling();
         windowTemp.transform.position = new Vector2(Screen.width / 2, Screen.height / 2);
+        windowTemp.GetComponent<InformationWindow>().setProfile(profilePrefabList[index]);
         windowTemp.SetActive(false);
 
         GameObject iconTemp = Instantiate(informationIconPrefab, this.transform);
@@ -87,5 +113,17 @@ public class GameManager : MonoBehaviour
         }
 
         Debug.Log("Weekly Evaluation is " + this.score);
+
+        NextWeek();
+    }
+
+    public void NextWeek()
+    {
+        weekNum++;
+        if (weekNum < stowawayWeekNum.Count)
+        {
+            ClearProfiles();
+            SpawnBatch(stowawayWeekNum[weekNum]);
+        }
     }
 }
