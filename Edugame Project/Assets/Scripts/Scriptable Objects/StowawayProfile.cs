@@ -24,6 +24,15 @@ public class StowawayProfile : ScriptableObject
     public int recreationAreaScore;
 
     [SerializeField, TextArea] public string poorResult;
+    [SerializeField, TextArea] public string poorPoorResult;
+    [SerializeField, TextArea] public string poorAdequateResult;
+    [SerializeField, TextArea] public string poorExcellentResult;
     [SerializeField, TextArea] public string adequateResult;
+    [SerializeField, TextArea] public string adequatePoorResult;
+    [SerializeField, TextArea] public string adequateAdequateResult;
+    [SerializeField, TextArea] public string adequateExcellentResult;
     [SerializeField, TextArea] public string excellentResult;
+    [SerializeField, TextArea] public string excellentPoorResult;
+    [SerializeField, TextArea] public string excellentAdequateResult;
+    [SerializeField, TextArea] public string excellentExcellentResult;
 }
