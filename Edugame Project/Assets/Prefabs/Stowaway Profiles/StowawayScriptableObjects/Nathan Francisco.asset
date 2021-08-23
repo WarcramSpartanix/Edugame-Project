@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc740221b4c4f74418b4ab4ca3461aa5, type: 3}
   m_Name: Nathan Francisco
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 84f017d642173e54f807c9ae6514e301, type: 3}
+  sprite: {fileID: 21300000, guid: 9138728b13ff82f4cb1e4e8a57cd0e0b, type: 3}
   name: Nathan Francisco
-  age: 
+  age: 32
   sex: M
   reason: "Says he wanted to \u201Cpeepoleave\u201D."
   profile: Had attended a lunch gathering and ate some seafood an hour ago. He knows

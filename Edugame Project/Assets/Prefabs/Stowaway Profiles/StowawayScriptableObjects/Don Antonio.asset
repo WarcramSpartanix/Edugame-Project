@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc740221b4c4f74418b4ab4ca3461aa5, type: 3}
   m_Name: Don Antonio
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 84f017d642173e54f807c9ae6514e301, type: 3}
+  sprite: {fileID: 21300000, guid: afee75e60ee5f6b48812d833eec18bba, type: 3}
   name: Don Antonio
-  age: 
+  age: 27
   sex: M
   reason: "Wants to prove that the Earth is flat.\r"
   profile: Lives a sedentary lifestyle. Consumes multiple chips and fried foods along
-    with 25- 30 bottles of beer every week and sleeps at 2:00 am.
+    with 25 - 30 bottles of beer every week and sleeps at 2:00 am.
   gymScore: 3
   canteenScore: 2
   waterStationScore: 0

@@ -17,9 +17,9 @@ MonoBehaviour:
   age: 22
   sex: M
   reason: "Someone promised him it was a magic carpet ride to a whole new world.\r"
-  profile: ' Has a history of asthma but has not recurred since the past 7 years.
-    Starts the day with 3 cups of coffee and sustains his energy throughout the day
-    with energy drinks and soft drinks'
+  profile: Has a history of asthma but has not recurred since the past 7 years. Starts
+    the day with 3 cups of coffee and sustains his energy throughout the day with
+    energy drinks and soft drinks
   gymScore: 0
   canteenScore: 1
   waterStationScore: 0
@@ -35,4 +35,3 @@ MonoBehaviour:
   excellentResult: Juan Dela Cruz feels that his respiratory health has greatly improved;
     he feels like he is breathing fresh air despite not being on Earth. He is now
     deemed fit to stay on Mars.
-  isUsed: 0

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc740221b4c4f74418b4ab4ca3461aa5, type: 3}
   m_Name: Marcos Marakkas
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: c3da932862a349a43b22125f4575b144, type: 3}
+  sprite: {fileID: 21300000, guid: 02eae9264eecac84291cae0d48907188, type: 3}
   name: Marcos Marakkas
-  age: 45?
+  age: 32
   sex: M
   reason: Wants to save Matt Damon.
   profile: 'A heavy smoker and has been smoking since he was 16. Previously worked
@@ -27,6 +27,13 @@ MonoBehaviour:
   podScore: 0
   medbayScore: 3
   recreationAreaScore: 2
-  poorResult: 
-  adequateResult: 
-  excellentResult: 
+  poorResult: 'Marcos Marakkas accidentally set off the smoke alarm when he went
+    to smoke. The doctors on board decided to have him undergo a medical examination
+    due to obvious signs of his declining health.  '
+  adequateResult: Marcos Marakkas has found a way to slip past the smoke detection
+    system by smoking in the Recreation Area. He mentioned that he has no intentions
+    of quitting smoking.
+  excellentResult: 'Marcos Marakkas underwent rehabilitation for his smoking habits.
+    He has been reported to not have smoked for the past few days and his health
+    also seems to be slowly improving. He says this is what he must do to save Matt
+    Damon. '

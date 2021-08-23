@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc740221b4c4f74418b4ab4ca3461aa5, type: 3}
   m_Name: Poopie Roxas
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 84f017d642173e54f807c9ae6514e301, type: 3}
+  sprite: {fileID: 21300000, guid: ab978745315c0ce4f9538e2996aa586e, type: 3}
   name: Poopie Roxas
-  age: 
+  age: 40
   sex: M
   reason: Wants to try pooping on Mars.
   profile: Recently got discharged from the hospital after acquiring covid19 - developed

@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using TMPro;
 
 //[CreateAssetMenu(fileName = "profilePair", menuName = "ScriptableObjects/profilePair", order = 1)]
 //public class profilePair : ScriptableObject
@@ -43,7 +44,12 @@ public class GameManager : MonoBehaviour
     private int weekNum = 0;
     [SerializeField]private List<int> stowawayWeekNum;
 
+    [SerializeField] TextMeshProUGUI resultsText;
+    [SerializeField] GameObject resultsWindow; 
+
     [SerializeField] GameObject logsButton;
+    [SerializeField] GameObject errorWindow;
+    [SerializeField] GameObject mainMenuWindow;
     [SerializeField] GameObject canvas; 
 
     private void Start()
@@ -123,6 +129,8 @@ public class GameManager : MonoBehaviour
         {
             if (!profile.AssignedToFacilities())
             {
+                this.errorWindow.SetActive(true);
+                this.errorWindow.transform.SetAsLastSibling();
                 Debug.Log("Not all are assigned");
                 return;
             }
@@ -155,5 +163,43 @@ public class GameManager : MonoBehaviour
 
             CloseWindows();
         }
+        else
+        {
+            this.ShowResults();
+        }
+    }
+
+    void ShowResults()
+    {
+        this.resultsWindow.SetActive(true);
+        this.resultsWindow.transform.SetAsLastSibling();
+        if (this.score <= 47)
+        {
+            this.resultsText.text = "Result: Poor\n There's always other planets.";
+        }
+        else if (this.score > 47 && this.score <= 60)
+        {
+            this.resultsText.text = "Result: Adequate\n Spaaaaaace.";
+        }
+        else if (this.score > 60)
+        {
+            this.resultsText.text = "Result: Excellent\n Ready to start your new life on Mars?";
+        }
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
+    public void NotReturnToMenu()
+    {
+        this.mainMenuWindow.SetActive(false);
+    }
+
+    public void OpenMainMenuWindow()
+    {
+        this.mainMenuWindow.SetActive(true);
+        this.mainMenuWindow.transform.SetAsLastSibling();
     }
 }

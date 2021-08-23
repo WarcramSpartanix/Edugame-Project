@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc740221b4c4f74418b4ab4ca3461aa5, type: 3}
   m_Name: Francis Corpus
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 84f017d642173e54f807c9ae6514e301, type: 3}
+  sprite: {fileID: 21300000, guid: c111d01a4c4e80a48b312683cbfd72ae, type: 3}
   name: Francis Corpus
-  age: 
+  age: 35
   sex: M
   reason: Wants to become a space pirate to experience space.
   profile: More than a month of continuous coughing with thick and bloody secretions.

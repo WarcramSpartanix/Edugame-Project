@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc740221b4c4f74418b4ab4ca3461aa5, type: 3}
   m_Name: Marcus Ordonez
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 84f017d642173e54f807c9ae6514e301, type: 3}
+  sprite: {fileID: 21300000, guid: 0766e00e3ffeb0548bbbcb48370f1323, type: 3}
   name: Marcus Ordonez
-  age: 
+  age: 26
   sex: M
   reason: Needs an excuse to not write his papers.
   profile: Reports episodes of chest pains varying in frequency, duration, and intensity.

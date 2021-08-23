@@ -840,6 +840,11 @@ MonoBehaviour:
   numFacilities: 0
   nameText: {fileID: 8916906547694507473}
   titleText: {fileID: 8916906547194295368}
+  sexText: {fileID: 0}
+  ageText: {fileID: 0}
+  reasonText: {fileID: 0}
+  profileText: {fileID: 0}
+  image: {fileID: 0}
   poorResult: 
   adequateResult: 
   excellentResult: 
@@ -1048,6 +1053,7 @@ MonoBehaviour:
   points: 2
   checkmark: {fileID: 3397149069722674667}
   parentWindow: {fileID: 8598335410823621806}
+  facilityType: 0
 --- !u!1 &8916906546605197591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1329,6 +1335,7 @@ MonoBehaviour:
   points: 2
   checkmark: {fileID: 3303702846398923772}
   parentWindow: {fileID: 8598335410823621806}
+  facilityType: 0
 --- !u!1 &8916906546738486171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,6 +1486,7 @@ MonoBehaviour:
   points: 0
   checkmark: {fileID: 8927193373654244976}
   parentWindow: {fileID: 8598335410823621806}
+  facilityType: 0
 --- !u!23 &2568343831341418264
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1669,6 +1677,7 @@ MonoBehaviour:
   points: 1
   checkmark: {fileID: 582174825032680505}
   parentWindow: {fileID: 8598335410823621806}
+  facilityType: 0
 --- !u!1 &8916906547127269253
 GameObject:
   m_ObjectHideFlags: 0
@@ -2080,7 +2089,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5f9c6830f4d486c4fb4f53cceb68990e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 74a158fd2cd0f1340889ef3c2ea9a1f4, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2239,6 +2248,7 @@ MonoBehaviour:
   points: 3
   checkmark: {fileID: 6752555777346023179}
   parentWindow: {fileID: 8598335410823621806}
+  facilityType: 0
 --- !u!1 &8916906547590747870
 GameObject:
   m_ObjectHideFlags: 0
@@ -2602,6 +2612,7 @@ MonoBehaviour:
   points: 0
   checkmark: {fileID: 5225127218801438582}
   parentWindow: {fileID: 8598335410823621806}
+  facilityType: 0
 --- !u!1 &8916906547692432109
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc740221b4c4f74418b4ab4ca3461aa5, type: 3}
   m_Name: Julius de Guzman
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 84f017d642173e54f807c9ae6514e301, type: 3}
+  sprite: {fileID: 21300000, guid: d2d0e7c7e83773645a360c070f83ee98, type: 3}
   name: Julius de Guzman
-  age: 
+  age: 28
   sex: M
   reason: Wants to see what Earth looks like from Mars.
   profile: Generally in good health. Has recently been developing mild wheezing and

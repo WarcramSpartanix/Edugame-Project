@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc740221b4c4f74418b4ab4ca3461aa5, type: 3}
   m_Name: Anderson Chua
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 84f017d642173e54f807c9ae6514e301, type: 3}
+  sprite: {fileID: 21300000, guid: 092f1285a363c2c40929032eaa2e720f, type: 3}
   name: Anderson Chua
-  age: 
+  age: 30
   sex: M
   reason: Heard that Martian cows have good milk.
   profile: Enjoys eating fast food meals and loves to drink carbonated drinks over

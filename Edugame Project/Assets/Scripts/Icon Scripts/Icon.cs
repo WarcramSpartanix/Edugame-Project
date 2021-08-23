@@ -11,6 +11,7 @@ public class Icon : MonoBehaviour
         if (!this.window.gameObject.activeInHierarchy)
         {
             this.window.gameObject.SetActive(true);
+            this.window.transform.SetAsLastSibling();
             this.window.MaximizeWindow();
         }
     }

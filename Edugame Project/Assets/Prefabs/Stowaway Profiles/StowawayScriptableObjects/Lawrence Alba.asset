@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc740221b4c4f74418b4ab4ca3461aa5, type: 3}
   m_Name: Lawrence Alba
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 84f017d642173e54f807c9ae6514e301, type: 3}
+  sprite: {fileID: 21300000, guid: 2059d9310d0f83f468272aa9218311db, type: 3}
   name: Lawrence Alba
-  age: 
+  age: 37
   sex: M
   reason: Was told Elon Musk would be here.
   profile: 'History of smoking. Reported experiencing fever, mild shortness of breath
-    and chest pain.Cough with clear and purulent (pus) secretions. Had a chest x-ray
+    and chest pain. Cough with clear and purulent (pus) secretions. Had a chest x-ray
     results that ruled out pneumonia - film showed no evidence of accumulation of
     water in lungs. '
   gymScore: 0
