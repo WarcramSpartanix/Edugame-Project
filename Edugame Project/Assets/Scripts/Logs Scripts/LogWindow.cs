@@ -16,12 +16,12 @@ public class LogWindow : Window
         this.gameObject.SetActive(false);
     }
 
-    public void AddNewLog(string message)
+    public void AddNewLog(string message, LogType type)
     {
         GameObject newMessage = GameObject.Instantiate(messageTemplate, this.messageContainer.transform);
         if (newMessage.GetComponentInChildren<LogMessage>() != null)
         {
-            newMessage.GetComponentInChildren<LogMessage>().AddMessage(message);
+            newMessage.GetComponentInChildren<LogMessage>().AddMessage(message, type);
             this.logMessages.Add(newMessage);
         }
     }

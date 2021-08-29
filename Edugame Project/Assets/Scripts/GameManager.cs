@@ -50,13 +50,23 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject logsButton;
     [SerializeField] GameObject errorWindow;
     [SerializeField] GameObject mainMenuWindow;
-    [SerializeField] GameObject canvas; 
+    [SerializeField] GameObject canvas;
+
+    [SerializeField] TextMeshProUGUI date;
+    [SerializeField] TextMeshProUGUI time; 
 
     private void Start()
     {
         profileList = new List<Profile>();
         SpawnBatch(stowawayWeekNum[weekNum]);
-        
+        this.date.text = "Month 1";
+    }
+
+    private void Update()
+    {
+        string hour = System.DateTime.Now.Hour.ToString();
+        string minutes = System.DateTime.Now.Minute.ToString();
+        this.time.text = hour + ":" + minutes; 
     }
 
     public void SpawnBatch(int count)
@@ -140,7 +150,7 @@ public class GameManager : MonoBehaviour
         foreach (Profile profile in profileList)
         {
             this.score += profile.GetScore();
-            this.emailWindow.AddNewLog(profile.GetResult());
+            this.emailWindow.AddNewLog(profile.GetResult(), profile.GetResultType());
         }
 
         NextWeek();
@@ -151,6 +161,7 @@ public class GameManager : MonoBehaviour
     public void NextWeek()
     {
         weekNum++;
+        this.date.text = "Month " + (weekNum + 1).ToString();
         if (weekNum < stowawayWeekNum.Count)
         {
             ClearProfiles();
@@ -173,15 +184,15 @@ public class GameManager : MonoBehaviour
     {
         this.resultsWindow.SetActive(true);
         this.resultsWindow.transform.SetAsLastSibling();
-        if (this.score <= 47)
+        if (this.score <= 35)
         {
             this.resultsText.text = "Result: Poor\n There's always other planets.";
         }
-        else if (this.score > 47 && this.score <= 60)
+        else if (this.score > 35 && this.score <= 55)
         {
             this.resultsText.text = "Result: Adequate\n Spaaaaaace.";
         }
-        else if (this.score > 60)
+        else if (this.score > 55)
         {
             this.resultsText.text = "Result: Excellent\n Ready to start your new life on Mars?";
         }

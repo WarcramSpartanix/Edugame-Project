@@ -95,6 +95,24 @@ public class InformationWindow : Window
         return this.resultText;
     }
 
+    public LogType GetResultType()
+    {
+        if (this.totalScore >= 0 && this.totalScore <= 2)
+        {
+            return LogType.POOR;
+        }
+        else if (this.totalScore > 2 && this.totalScore <= 4)
+        {
+            return LogType.ADEQUATE;
+        }
+        else if (this.totalScore > 4 && this.totalScore <= 7)
+        {
+            return LogType.EXCELLENT;
+        }
+
+        return LogType.NONE;
+    }
+
     public bool isAssigned()
     {
         if (this.numFacilities > 0)

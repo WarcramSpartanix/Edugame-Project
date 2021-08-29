@@ -31,4 +31,9 @@ public class Profile
     {
         return windowComp.GetResult();
     }
+
+    public LogType GetResultType()
+    {
+        return windowComp.GetResultType();
+    }
 }
