@@ -12,6 +12,7 @@ public class MusicManager : MonoBehaviour
     [SerializeField] private Dictionary<string, Sound> soundMap;
     public int index = 0;
     public AudioSource currentMusic = null;
+    float volume = 1;
 
     void Awake()
     {
@@ -46,6 +47,7 @@ public class MusicManager : MonoBehaviour
             index++;
             currentMusic = soundList[(index % soundList.Count)].source;
             currentMusic.Play();
+            currentMusic.volume = this.volume;
         }
     }
 
@@ -81,6 +83,7 @@ public class MusicManager : MonoBehaviour
 
     public void AdjustVolume(float volume)
     {
+        this.volume = volume;
         currentMusic.volume = volume;
     }
 }
