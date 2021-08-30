@@ -79,15 +79,15 @@ public class InformationWindow : Window
 
     public string GetResult()
     {
-        if (this.totalScore >= 0 && this.totalScore <= 3)
+        if (this.totalScore >= 0 && this.totalScore <= 2)
         {
             this.resultText = this.poorResult;
         }
-        else if (this.totalScore > 3 && this.totalScore <= 5)
+        else if (this.totalScore > 2 && this.totalScore <= 4)
         {
             this.resultText = this.adequateResult;
         }
-        else if (this.totalScore > 5 && this.totalScore <= 7)
+        else if (this.totalScore > 4 && this.totalScore <= 7)
         {
             this.resultText = this.excellentResult;
         }

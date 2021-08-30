@@ -50,6 +50,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject logsButton;
     [SerializeField] GameObject errorWindow;
     [SerializeField] GameObject mainMenuWindow;
+    [SerializeField] GameObject settingsMenu;
     [SerializeField] GameObject canvas;
 
     [SerializeField] TextMeshProUGUI date;
@@ -190,7 +191,7 @@ public class GameManager : MonoBehaviour
         }
         else if (this.score > 35 && this.score <= 55)
         {
-            this.resultsText.text = "Result: Adequate\n Spaaaaaace.";
+            this.resultsText.text = "Result: Adequate\n Mars doesn't seem that far off now.";
         }
         else if (this.score > 55)
         {
@@ -212,5 +213,10 @@ public class GameManager : MonoBehaviour
     {
         this.mainMenuWindow.SetActive(true);
         this.mainMenuWindow.transform.SetAsLastSibling();
+    }
+
+    public void OnSettingsClick()
+    {
+        this.settingsMenu.SetActive(true);
     }
 }

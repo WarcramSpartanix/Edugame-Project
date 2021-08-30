@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class OkButton : MonoBehaviour
 {
-    [SerializeField] GameObject errorWindow; 
+    [SerializeField] GameObject window; 
     
     public void OnButtonClick()
     {
-        this.errorWindow.SetActive(false);
+        this.window.SetActive(false);
     }
 }

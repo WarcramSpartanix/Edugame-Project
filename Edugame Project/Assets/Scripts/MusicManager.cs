@@ -78,4 +78,9 @@ public class MusicManager : MonoBehaviour
         sound.source.Stop();
 
     }
+
+    public void AdjustVolume(float volume)
+    {
+        currentMusic.volume = volume;
+    }
 }
