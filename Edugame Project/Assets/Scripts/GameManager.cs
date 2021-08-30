@@ -218,5 +218,6 @@ public class GameManager : MonoBehaviour
     public void OnSettingsClick()
     {
         this.settingsMenu.SetActive(true);
+        this.mainMenuWindow.transform.SetAsLastSibling();
     }
 }
